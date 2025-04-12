@@ -249,22 +249,6 @@ function App() {
       observer.observe(title);
     });
 
-    // --- Infinite Scroll Content Setup ---
-    const scrollContent = document.getElementById('scrollContent');
-    
-
-    // Function to create a single scroll item element
-    function createScrollItem(item: any) {
-      return `
-            <div className="scroll-item">
-                <img src="${item.img}" alt="${item.name}" onerror="this.onerror=null; this.src='https://placehold.co/80x80/cccccc/ffffff?text=Err';">
-                <div className="text">
-                    <strong>${item.name}</strong>
-                    <span>${item.msg}</span>
-                </div>
-            </div>
-        `;
-    }
 
   
 
@@ -473,7 +457,7 @@ function App() {
                   <div className="phone-mockup">
                     <div className="phone-screen">
                       <div className="scroll-content bg-white text-left" >
-                        {fbPosts.map((post, index) => (
+                        {fbPosts.map((post:any) => (
                           <div className="p-4 border-b border-gray-200">
                           <div className="flex items-center mb-3">
                             <img className="h-10 w-10 rounded-full mr-3 object-cover"

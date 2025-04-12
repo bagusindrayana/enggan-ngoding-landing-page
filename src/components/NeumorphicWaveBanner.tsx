@@ -1,5 +1,5 @@
 
-import React, { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 
 // --- Neumorphic Wave Banner Component ---
 function NeumorphicWaveBanner() {
