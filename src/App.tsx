@@ -250,7 +250,7 @@ function App() {
     });
 
 
-  
+
 
   }, []);
 
@@ -258,8 +258,10 @@ function App() {
     <>
       <div className='fixed top-0 left-0 right-0 bottom-0 w-full  bg-[#e0e5ec] z-50 overflow-hidden' id='loading'>
         <div className='fixed top-0 left-0 right-0 bottom-0 m-auto' style={{
-          height: '600px',
-          width: '600px',
+          maxHeight: '600px',
+          maxWidth: '600px',
+          width: '100%',
+          height: '100%',
         }}>
 
           <RiveComponent />
@@ -328,7 +330,7 @@ function App() {
               </a>
             </div>
           </div>
-         
+
         </section>
 
         <section id="about" className="py-28 px-6 md:px-12 space-y-12">
@@ -340,7 +342,12 @@ function App() {
               {/* <img src="/imphnen simple.png" alt="" width={200} className='mx-auto' /> */}
 
               <div className='relative' style={{ width: '150px', height: '150px', margin: '0 auto' }}>
-                <div className='absolute' style={{ width: '200px', height: '200px', margin: '0 auto', top: '-25px' }}>
+                <div className='absolute' style={{
+                  maxHeight: '600px',
+                  maxWidth: '600px',
+                  width: '100%',
+                  height: '100%', margin: '0 auto', top: '-25px'
+                }}>
                   <Rive
                     src="/test_logo_imphnen.riv"
                     animations="Timeline 2"
@@ -431,7 +438,7 @@ function App() {
                 </p>
 
                 <div className="space-y-4 text-left mb-8">
-        
+
                   <div className="neumorphic-inset flex items-center space-x-4">
                     <i className="fas fa-gear text-2xl text-gray-600"></i>
                     <span className="text-gray-700">Membahas framework JavaScript terbaru (tanpa pernah menginstalnya).</span>
@@ -457,50 +464,50 @@ function App() {
                   <div className="phone-mockup">
                     <div className="phone-screen">
                       <div className="scroll-content bg-white text-left" >
-                        {fbPosts.map((post:any) => (
+                        {fbPosts.map((post: any) => (
                           <div className="p-4 border-b border-gray-200">
-                          <div className="flex items-center mb-3">
-                            <img className="h-10 w-10 rounded-full mr-3 object-cover"
-                              src="https://placehold.co/40x40/E2E8F0/4A5568?text=User"
-                              alt="User profile picture" />
-                            <div>
-                              <p className="text-sm font-semibold text-gray-900">{post.name}</p>
-                              <p className="text-xs text-gray-500">2 hours ago</p>
+                            <div className="flex items-center mb-3">
+                              <img className="h-10 w-10 rounded-full mr-3 object-cover"
+                                src="https://placehold.co/40x40/E2E8F0/4A5568?text=User"
+                                alt="User profile picture" />
+                              <div>
+                                <p className="text-sm font-semibold text-gray-900">{post.name}</p>
+                                <p className="text-xs text-gray-500">2 hours ago</p>
+                              </div>
+                              <div className="ml-auto">
+                                <i className="fas fa-ellipsis-h text-gray-500"></i>
+                              </div>
                             </div>
-                            <div className="ml-auto">
-                              <i className="fas fa-ellipsis-h text-gray-500"></i>
+
+                            <div className="mb-3">
+                              <p className="text-sm text-gray-800 mb-3 ">
+                                {post.msg}
+                              </p>
+                              <img className="w-full rounded-lg object-cover"
+                                src={post.img} />
+                            </div>
+
+                            <div className="flex justify-around border-t border-gray-200 pt-3 text-sm md:text-base">
+                              <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
+                                <i className="far fa-thumbs-up mr-1"></i> Like
+                              </button>
+                              <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
+                                <i className="far fa-comment-alt mr-1"></i> Comment
+                              </button>
+                              <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
+                                <i className="far fa-share-square mr-1"></i> Share
+                              </button>
                             </div>
                           </div>
-
-                          <div className="mb-3">
-                            <p className="text-sm text-gray-800 mb-3 ">
-                            {post.msg}
-                            </p>
-                            <img className="w-full rounded-lg object-cover"
-                              src={post.img} />
-                          </div>
-
-                          <div className="flex justify-around border-t border-gray-200 pt-3 text-sm md:text-base">
-                            <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
-                              <i className="far fa-thumbs-up mr-1"></i> Like
-                            </button>
-                            <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
-                              <i className="far fa-comment-alt mr-1"></i> Comment
-                            </button>
-                            <button className="flex items-center text-gray-600 hover:text-blue-600 text-sm">
-                              <i className="far fa-share-square mr-1"></i> Share
-                            </button>
-                          </div>
-                        </div>
                         ))}
-                        
 
-                        
+
+
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
