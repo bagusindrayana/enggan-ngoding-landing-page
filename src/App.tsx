@@ -52,7 +52,7 @@ function App() {
   ];
 
   const { rive, RiveComponent } = useRive({
-    src: './test_logo_imphnen.riv',
+    src: './test_logo_imphnen_2.riv',
     animations: 'Timeline 1',
     autoplay: true,
     onLoad: () => {
@@ -349,7 +349,7 @@ function App() {
                   height: '100%', margin: '0 auto', top: '-25px'
                 }}>
                   <Rive
-                    src="/test_logo_imphnen.riv"
+                    src="/test_logo_imphnen_2.riv"
                     animations="Timeline 2"
 
                   />
